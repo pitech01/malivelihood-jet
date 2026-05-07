@@ -99,11 +99,11 @@ const AboutUs: React.FC = () => {
         <div className="container">
           <div className="about-split reveal" style={{ gap: '0' }}>
             <div className="image-side" style={{ flex: '1.2' }}>
-              <img src={personInJet} alt="Premium Experience" style={{ width: '100%', height: '800px', objectFit: 'cover' }} />
+              <img src={personInJet} alt="Premium Experience" className="about-experience-img" />
             </div>
-            <div className="text-side" style={{ paddingLeft: '80px', flex: '1' }}>
+            <div className="text-side about-experience-text" style={{ flex: '1' }}>
               <span className="eyebrow">UNMATCHED SERVICE</span>
-              <h2 className="serif-text" style={{ fontSize: '3rem' }}>Expertise You Can Trust</h2>
+              <h2 className="serif-text experience-title">Expertise You Can Trust</h2>
               <p style={{ color: '#666', lineHeight: '1.8', fontSize: '1.2rem', marginBottom: '2rem' }}>
                Dr. Micheal Olushola Awujoola: CEO – With over 15 years of experience in private avaition and delivering high luxury services and goods to the 1% of the 1% across Africa, America and Europe, The Black Jeweler leads our team with a focus on client satisfaction and operational excellence.
               </p>

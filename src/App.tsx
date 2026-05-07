@@ -18,7 +18,26 @@ const ScrollToTop = () => {
   return null;
 };
 
+// Preloader Component
+const Preloader = ({ loading }: { loading: boolean }) => {
+  return (
+    <div className={`preloader ${!loading ? 'hidden' : ''}`}>
+      <img src={logo} alt="Malivelihood" className="preloader-logo" />
+      <div className="preloader-content">
+        <div className="jet-track"></div>
+        <div className="jet-icon-wrap">
+          <svg className="jet-icon" viewBox="0 0 24 24">
+            <path d="M21,16L22,19H15V22H13V19H10L9,16H10L11,13H8L7,11H12V8L11,7V5L12,4L13,5V7L12,8V11H17L16,13H19L20,16H21M13,2C11.89,2 11,2.89 11,4V5H13V4C13,2.89 12.11,2 11,2Z" />
+          </svg>
+        </div>
+        <span className="preloader-text">PREPARING FOR TAKE-OFF</span>
+      </div>
+    </div>
+  )
+}
+
 function App() {
+  const [loading, setLoading] = useState(true)
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
@@ -53,8 +72,17 @@ function App() {
     }
   }, [location.pathname]) // Re-run when page changes to re-observe elements
 
+  useEffect(() => {
+    // Initial loading delay
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 2800)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div className="app-wrapper">
+      <Preloader loading={loading} />
       <ScrollToTop />
       
       {/* Navigation */}

@@ -15,7 +15,7 @@ const ContactUs: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const whatsappNumber = "2347081507039";
+    const whatsappNumber = "2347064603026";
     const text = `*New Contact Message - Malivelihood Jet*%0A%0A` +
       `*Name:* ${formData.firstName} ${formData.lastName}%0A` +
       `*Email:* ${formData.email}%0A` +
@@ -36,8 +36,8 @@ const ContactUs: React.FC = () => {
       {/* Hero Styled like About Us */}
       <section className="about-hero" style={{ backgroundImage: `url(${aboutHero})` }}>
         <img src={logo} alt="Malivelihood" className="about-hero-logo reveal" />
-        <h1 className="serif-text reveal" style={{ fontSize: '4rem' }}>Contact Us</h1>
-        <p className="reveal" style={{ maxWidth: '650px', margin: '0 auto' }}>
+        <h1 className="serif-text reveal">Contact Us</h1>
+        <p className="reveal">
           Whether you have a specific travel request or simply wish to learn more about our services, our dedicated team is at your disposal.
         </p>
       </section>

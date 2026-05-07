@@ -18,7 +18,7 @@ const RequestAQuote: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const whatsappNumber = "2347081507039";
+    const whatsappNumber = "2347064603026";
     const text = `*New Quote Request - Malivelihood Jet*%0A%0A` +
       `*Itinerary:* ${formData.from} to ${formData.to}%0A` +
       `*Date:* ${formData.departureDate}%0A` +
@@ -52,7 +52,7 @@ const RequestAQuote: React.FC = () => {
           {/* Main Form Card */}
           <div className="quote-form-card reveal">
             <form className="contact-form" onSubmit={handleSubmit}>
-              
+
               <div className="form-step-title">
                 <span>Step 01</span>
                 <h2>Flight Details</h2>
