@@ -11,6 +11,8 @@
   --subtle-glass: rgba(255, 255, 255, 0.03);
   --border-glass: rgba(255, 255, 255, 0.1);
   --accent-blue: hsl(205, 80%, 45%);
+  --gold: #c5a059;
+  --gold-dark: #a68446;
   --light-gray: #f9f9fb;
   --medium-gray: #777;
 
@@ -481,6 +483,62 @@ h3,
   color: #fff;
 }
 
+/* --- LUXURY BUTTON SYSTEM --- */
+.btn-luxury {
+  position: relative;
+  background: var(--onyx);
+  color: #fff;
+  border: 1px solid var(--gold);
+  padding: 22px 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s var(--ease-expo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 0; /* Sharp edges for elite aesthetic */
+  z-index: 1;
+}
+
+.btn-luxury::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(197, 160, 89, 0.4),
+    transparent
+  );
+  transition: 0.8s;
+  z-index: -1;
+}
+
+.btn-luxury:hover::before {
+  left: 100%;
+}
+
+.btn-luxury:hover {
+  background: var(--gold);
+  color: #000;
+  letter-spacing: 0.6em;
+  box-shadow: 0 20px 50px rgba(197, 160, 89, 0.3);
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.btn-luxury:active {
+  transform: translateY(-2px);
+}
+
 .btn-outline {
   border: 1px solid rgba(255, 255, 255, 0.4);
   background: transparent;
@@ -676,6 +734,8 @@ h3,
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="tel"],
+.contact-form input[type="date"],
+.contact-form input[type="number"],
 .contact-form select,
 .contact-form textarea {
   width: 100%;
@@ -1136,7 +1196,7 @@ h3,
   position: relative;
 }
 
-.itinerary-group input {
+.itinerary-group .input-wrap input {
   padding-left: 45px !important;
 }
 

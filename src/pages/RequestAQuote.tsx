@@ -61,13 +61,26 @@ const RequestAQuote: React.FC = () => {
               <div className="itinerary-group">
                 <div className="input-wrap">
                   <span className="input-icon">🛫</span>
-                  <input type="text" name="from" placeholder="From (Airport or City)" onChange={handleChange} required />
+                  <input type="text" name="from" placeholder="From (Airport or City)" list="airport-suggestions" onChange={handleChange} required />
                 </div>
                 <div className="input-wrap">
                   <span className="input-icon">🛬</span>
-                  <input type="text" name="to" placeholder="To (Airport or City)" onChange={handleChange} required />
+                  <input type="text" name="to" placeholder="To (Airport or City)" list="airport-suggestions" onChange={handleChange} required />
                 </div>
               </div>
+
+              <datalist id="airport-suggestions">
+                <option value="Lagos, Nigeria (LOS)" />
+                <option value="Abuja, Nigeria (ABV)" />
+                <option value="Port Harcourt, Nigeria (PHC)" />
+                <option value="London, UK (LHR)" />
+                <option value="Dubai, UAE (DXB)" />
+                <option value="New York, USA (JFK)" />
+                <option value="Paris, France (CDG)" />
+                <option value="Geneva, Switzerland (GVA)" />
+                <option value="Johannesburg, South Africa (JNB)" />
+                <option value="Marrakech, Morocco (RAK)" />
+              </datalist>
 
               <div className="itinerary-group">
                 <div className="form-group">
@@ -130,7 +143,7 @@ const RequestAQuote: React.FC = () => {
                 </label>
               </div>
 
-              <button type="submit" className="btn-elevated" style={{ width: '100%', border: 'none' }}>
+              <button type="submit" className="btn-luxury" style={{ width: '100%' }}>
                 SUBMIT REQUEST
               </button>
             </form>

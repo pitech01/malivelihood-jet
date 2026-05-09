@@ -109,7 +109,7 @@ const ContactUs: React.FC = () => {
                 </label>
               </div>
 
-              <button type="submit" className="btn-elevated" style={{ width: '100%', border: 'none' }}>
+              <button type="submit" className="btn-luxury" style={{ width: '100%' }}>
                 SEND MESSAGE
               </button>
             </form>

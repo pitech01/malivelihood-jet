@@ -27,7 +27,7 @@ const Preloader = ({ loading }: { loading: boolean }) => {
         <div className="jet-track"></div>
         <div className="jet-icon-wrap">
           <svg className="jet-icon" viewBox="0 0 24 24">
-            <path d="M21,16L22,19H15V22H13V19H10L9,16H10L11,13H8L7,11H12V8L11,7V5L12,4L13,5V7L12,8V11H17L16,13H19L20,16H21M13,2C11.89,2 11,2.89 11,4V5H13V4C13,2.89 12.11,2 11,2Z" />
+            <path d="M21,15.5l-4.5-1.5l-2.8-8.5C13.4,4.6,12.8,4,12,4s-1.4,0.6-1.7,1.5L7.5,14L3,15.5c-0.8,0.3-1,1.1-1,1.5 s0.2,1.2,1,1.5l4.5,1.5l2.8,4.5c0.3,0.6,0.9,1,1.7,1s1.4-0.4,1.7-1l2.8-4.5l4.5-1.5c0.8-0.3,1-1.1,1-1.5S21.8,15.8,21,15.5z" />
           </svg>
         </div>
         <span className="preloader-text">PREPARING FOR TAKE-OFF</span>
@@ -76,7 +76,7 @@ function App() {
     // Initial loading delay
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 2800)
+    }, 4500)
     return () => clearTimeout(timer)
   }, [])
 
