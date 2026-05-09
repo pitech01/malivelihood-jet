@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import fleet1 from '../assets/fleet1.png'
 import heroImg from '../assets/hero.png'
 import diningImg from '../assets/dining.png'
@@ -13,8 +14,8 @@ const Home: React.FC = () => {
           <span className="hero-tag">THE PRIVILEGE OF PRIVACY</span>
           <h1>The Luxury <br /> of Choice.</h1>
           <div className="hero-cta">
-            <button className="btn-elevated white">EXPLORE FLEET</button>
-            <button className="btn-outline" style={{ padding: '18px 45px' }}>LEARN MORE</button>
+            <Link to="/fleet"><button className="btn-elevated white">EXPLORE FLEET</button></Link>
+            <Link to="/about"><button className="btn-outline" style={{ padding: '18px 45px' }}>LEARN MORE</button></Link>
           </div>
         </div>
       </section>
@@ -29,7 +30,7 @@ const Home: React.FC = () => {
               Safe, fast and reliable private jet charters around the world. Book your flight and fly at your convenience with access to over 300 aircraft worldwide.
             </p>
             <div className="intro-action">
-              <button className="btn-elevated">BOOK YOUR FLIGHT</button>
+              <Link to="/quote"><button className="btn-elevated">BOOK YOUR FLIGHT</button></Link>
             </div>
           </div>
 

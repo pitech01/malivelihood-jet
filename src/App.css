@@ -1556,3 +1556,142 @@ h3,
     margin-bottom: 30px;
   }
 }
+
+/* FLEET PAGE STYLES */
+.fleet-category-block {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.fleet-category-block.reverse {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.fleet-category-block.reverse .fleet-cat-info {
+  order: 2;
+}
+
+.fleet-category-block.reverse .fleet-cat-visual {
+  order: 1;
+}
+
+.cat-number {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.cat-specs {
+  display: flex;
+  gap: 40px;
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.spec-label {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  color: #999;
+  font-weight: 600;
+}
+
+.spec-val {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.fleet-cat-visual {
+  position: relative;
+}
+
+.main-jet-img {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 40px 40px 100px rgba(0,0,0,0.08);
+}
+
+.main-jet-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s var(--ease-expo);
+}
+
+.main-jet-img:hover img {
+  transform: scale(1.05);
+}
+
+.img-overlay-label {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(0,0,0,0.8);
+  color: var(--gold);
+  padding: 10px 20px;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* Fleet Table */
+.fleet-table-wrap {
+  overflow-x: auto;
+}
+
+.fleet-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.fleet-table th {
+  padding: 25px;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  border-bottom: 1px solid #ddd;
+}
+
+.fleet-table td {
+  padding: 30px 25px;
+  font-size: 1rem;
+  color: #000;
+  border-bottom: 1px solid #eee;
+}
+
+.fleet-table tr:hover td {
+  background: rgba(197, 160, 89, 0.03);
+}
+
+@media (max-width: 991px) {
+  .fleet-category-block, .fleet-category-block.reverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .fleet-category-block.reverse .fleet-cat-info {
+    order: 1;
+  }
+  
+  .fleet-category-block.reverse .fleet-cat-visual {
+    order: 2;
+  }
+  
+  .cat-specs {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

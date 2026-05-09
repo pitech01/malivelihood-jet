@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
 import RequestAQuote from './pages/RequestAQuote'
+import Fleet from './pages/Fleet'
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -136,6 +137,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/quote" element={<RequestAQuote />} />
+          <Route path="/fleet" element={<Fleet />} />
         </Routes>
       </main>
 
